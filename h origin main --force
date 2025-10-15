@@ -1,0 +1,54 @@
+[33mcommit e9731471eddc3c39c8f1cfba5ceaa01f5a366ecf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Jeff Pasos <dpasos34819@ufide.ac.cr>
+Date:   Mon Oct 6 23:30:05 2025 -0600
+
+    Restore application.properties (clean version)
+
+[33mcommit 441feaacd8a882b2eb3f24a3957c1431167bcd15[m
+Author: Jeff Pasos <dpasos34819@ufide.ac.cr>
+Date:   Mon Oct 6 22:45:48 2025 -0600
+
+    Arreglo de error al entrar en categoría, se arreglo cambiando en el pom, agregando el plugin de lombok. Tambien cambiando (resolver.setPrefix(classpath:/templates/);), agregandole el (/). Tambien se agrego la base de datos a Aiven para poder trabajar en un entorno mas parecido a uno empresarial
+
+[33mcommit c98db1925f4a72163dadda9264fb8cd880bc8638[m
+Author: Jeff Pasos <dpasos34819@ufide.ac.cr>
+Date:   Tue Sep 30 21:02:34 2025 -0600
+
+    Se implementaron nuevos features
+
+[33mcommit 85db3d72c2d6dd541392ff67047e9e4c6edb85ea[m
+Author: Jeff Pasos <dpasos34819@ufide.ac.cr>
+Date:   Tue Sep 23 20:48:23 2025 -0600
+
+    Semana 2 implementacion de properties, nuevo pom.xml, fragmentos e internacionalizacion
+
+[33mcommit 9fdf10412b56f3504db8cf36971b8689ee9d59e5[m
+Author: JefersePasos <dpasos34819@ufide.ac.cr>
+Date:   Mon Sep 22 21:12:21 2025 -0600
+
+    Actualizacion de cambios desde Windows
+
+[33mcommit 51ce836206cbb830d9133a04ab3b486e97446095[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m
+Merge: 4cb18a4 617bf10
+Author: Jeff Pasos <dpasos34819@ufide.ac.cr>
+Date:   Sun Sep 21 19:47:49 2025 -0600
+
+    Fusionando master en main
+
+[33mcommit 617bf10137cf6bfa8fea80050d03882b3e80ffb2[m
+Author: JeffPasos <dpasos34819@ufide.ac.cr>
+Date:   Tue Sep 16 20:50:33 2025 -0600
+
+    Primer commit del proyecto de desarrollo web y patrones Sem 1 y 2
+
+[33mcommit 4cb18a475a5b93370bd7fcd225a91b1f36b5e00f[m
+Author: JefersePasos <95254914+JefersePasos@users.noreply.github.com>
+Date:   Tue Sep 16 18:31:01 2025 -0600
+
+    Update README.md
+
+[33mcommit ce6ee88d1a994646d90362ba00abae7f56c33c44[m
+Author: JefersePasos <95254914+JefersePasos@users.noreply.github.com>
+Date:   Tue Sep 16 18:26:46 2025 -0600
+
+    Initial commit
