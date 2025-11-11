@@ -14,8 +14,13 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class ProductoService {
 
-    @Autowired
-    private ProductoRepository productoRepository;
+    private final ProductoRepository productoRepository;
+    private final FirebaseStorageService firebaseStorageService;
+
+    public ProductoService(ProductoRepository productoRepository, FirebaseStorageService firebaseStorageService) {
+        this.productoRepository = productoRepository;
+        this.firebaseStorageService = firebaseStorageService;
+    }
 
     @Transactional(readOnly = true)
     public List<Producto> getProductos(boolean activo) {
@@ -29,9 +34,6 @@ public class ProductoService {
     public Optional<Producto> getProducto(Long idProducto) {
         return productoRepository.findById(idProducto);
     }
-
-    @Autowired
-    private FirebaseStorageService firebaseStorageService;
 
     @Transactional
     public void save(Producto producto, MultipartFile imagenFile) {
@@ -62,6 +64,21 @@ public class ProductoService {
             // Lanza una nueva excepción para encapsular el problema de integridad de datos
             throw new IllegalStateException("No se puede eliminar la producto. Tiene datos asociados.", e);
         }
+    }
+
+    @Transactional(readOnly = true)
+    public List<Producto> consultaDerivada(double precioInf, double precioSup) {
+        return productoRepository.findByPrecioBetweenOrderByPrecioAsc(precioInf, precioSup);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Producto> consultaJPQL(double precioInf, double precioSup) {
+        return productoRepository.consultaJPQL(precioInf, precioSup);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Producto> consultaSQL(double precioInf, double precioSup) {
+        return productoRepository.consultaSQL(precioInf, precioSup);
     }
 
 }

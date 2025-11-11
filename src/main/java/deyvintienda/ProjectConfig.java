@@ -3,7 +3,6 @@ package deyvintienda;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
@@ -46,7 +45,7 @@ public class ProjectConfig implements WebMvcConfigurer {
         resolver.setOrder(0);
         resolver.setCheckExistence(true);
         return resolver;
-    }
+    } 
 
     @Bean
     public LocaleResolver localeResolver() {

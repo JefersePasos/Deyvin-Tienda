@@ -45,4 +45,8 @@ public class IndexController {
         model.addAttribute("categorias", categorias);
         return "/index";
     }
+    @GetMapping("/test-simple")
+    public String testSimple() {
+        return "test-simple";
+    }
 }
